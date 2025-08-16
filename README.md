@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tales Augusto Almeida – Aulas Particulares</title>
+  <title>Tales Augusto – Aulas Particulares</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -59,8 +58,8 @@
 </head>
 <body>
   <header>
-    <h1>Tales Augusto Almeida</h1>
-    <p>Professor | Economista | Aulas Particulares</p>
+    <h1>Tales Augusto</h1>
+    <p>Economista | Professor | Aulas Particulares</p>
   </header>
 
   <nav>
@@ -71,32 +70,38 @@
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou economista formado pelo Insper com distinção de mérito colaborativo, monitor de disciplinas como Microeconomia I e Econometria. Tenho paixão pelo ensino e ofereço aulas particulares voltadas para alunos de graduação e pré-vestibular, com abordagem clara e personalizada.</p>
+    <p>Sou mestrando na FEA-USP, economista formado pelo Insper - Turma de 2023 - com distinção de mérito colaborativo e professor monitor das disciplinas de Microeconomia I e Econometria do Insper e Econometria na Faculdade Belavista. Tenho paixão pelo ensino e ofereço aulas particulares voltadas para alunos de graduação e pré-vestibular, com abordagem clara e personalizada.</p>
   </section>
 
   <section id="aulas">
     <h2>Aulas Particulares</h2>
-    <p>Ofereço aulas nas seguintes disciplinas:</p>
+    <p>Para alunos do Insper ofereço aulas nas seguintes disciplinas:</p>
     <ul>
-      <li>Estatística I e II</li>
       <li>Sistemas de Informação</li>
+      <li>Estatística I e II</li>
       <li>Microeconomia II e III</li>
-      <li>Econometria Aplicada</li>
     </ul>
-    <p>Modalidade online ou presencial na região da Av. Paulista. Agendamentos flexíveis. Entre em contato para mais detalhes.</p>
-    <a href="#contato" class="button">Agendar Aula</a>
+    <p>Para alunos de outras faculdades ofereço aulas nas seguintes áreas:</p>
+    <ul>
+      <li>Excel</li>
+      <li>Programação em VBA, Python, R e Stata</li>
+      <li>Distribuição de probabilidades, Análise descritiva, Inferência estatística e Econometria</li>
+      <li>Microeconomia</li>
+    </ul>
+    <p>Modalidade online. Agendamentos flexíveis. Entre em contato para mais detalhes.</p>
+    <a href="http://wa.me/+5511987333219" class="button" target="_blank">Agendar Aula</a>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>📧 Email: tales.aulas@email.com<br>
-       📱 WhatsApp: (11) 91234-5678<br>
-       🔗 <a href="https://www.linkedin.com/in/talesaugustoalmeida" target="_blank">LinkedIn</a>
+    <p>📧 Email: tales.augusto22@hotmail.com<br>
+       📱 WhatsApp: (11) 98733-3219<br>
+       🔗 <a href="https://www.linkedin.com/in/tales-augusto-de-almeida?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
     </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Tales Augusto Almeida. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Tales Augusto de Almeida. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
