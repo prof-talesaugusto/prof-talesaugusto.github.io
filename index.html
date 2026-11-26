@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tales Augusto – Aulas Particulares</title>
   <link href="https://fonts.googleapis.com/css2?family=Canela:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -64,8 +65,8 @@
     }
 
     .sobre-container img {
-      width: 260px;                 /* um pouco maior */
-      border-radius: 12px;          /* arredondamento leve */
+      width: 260px;
+      border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
@@ -107,13 +108,143 @@
     ul {
       padding-left: 1.2rem;
     }
+
+    /* ========================================
+       AGENDA DE IMERSÕES
+       ======================================== */
+
+    .agenda-lista {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+
+    .agenda-disciplina {
+      font-size: 1.05rem;
+      margin: 1.5rem 0 0.25rem;
+    }
+
+    .imersao {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Calendário personalizado */
+
+    .calendario {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 62px;
+      width: 62px;
+      border: 1px solid #004e7c;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,78,124,0.08);
+    }
+
+    .calendario-mes {
+      background-color: #004e7c;
+      color: white;
+      font-size: 0.72rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 4px 0;
+    }
+
+    .calendario-dia {
+      color: #004e7c;
+      font-size: 1.9rem;
+      font-weight: bold;
+      line-height: 1.25;
+      padding: 6px 0;
+    }
+
+    /* Informações da imersão */
+
+    .imersao-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .imersao-titulo {
+      display: block;
+      line-height: 1.45;
+    }
+
+    .imersao-horario,
+    .imersao-modalidade {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #59636c;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .icone-video {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ========================================
+       ADAPTAÇÃO PARA CELULARES
+       ======================================== */
+
+    @media (max-width: 600px) {
+
+      section {
+        margin: 1rem;
+        padding: 1.25rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0.25rem 0.5rem;
+      }
+
+      .sobre-container img {
+        max-width: 100%;
+      }
+
+      .sobre-texto {
+        min-width: 0;
+      }
+
+      .imersao {
+        gap: 0.75rem;
+      }
+
+      .calendario {
+        flex-basis: 54px;
+        width: 54px;
+      }
+
+      .calendario-dia {
+        font-size: 1.65rem;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
+
+  <!-- CABEÇALHO -->
+
   <header>
     <h1>Tales Augusto</h1>
     <p>Economista | Professor | Aulas Particulares</p>
   </header>
+
+
+  <!-- MENU DE NAVEGAÇÃO -->
 
   <nav>
     <a href="#sobre">Sobre</a>
@@ -122,29 +253,63 @@
     <a href="#contato">Contato</a>
   </nav>
 
+
+  <!-- SOBRE MIM -->
+
   <section id="sobre">
+
     <h2>Sobre Mim</h2>
 
     <div class="sobre-container">
+
       <img src="perfil.jpeg" alt="Tales Augusto">
 
       <div class="sobre-texto">
+
         <p>
-          Sou economista formado pelo Insper (Turma de 2023), onde me graduei com distinção de mérito colaborativo, e mestrando em Economia na FEA-USP. 
-          No Insper, atuei como professor monitor da disciplina de Sistemas de Informação, durante o ano de 2020, enquanto ainda era aluno da graduação. Além de ter sido teaching assistant de Microeconomia I (de julho de 2023 à dezembro de 2025) e de Econometria (durante todo o ano de 2025) no Insper. Também fui teaching assistant de Econometria I na Faculdade Belavista em 2025.
+          Sou economista formado pelo Insper (Turma de 2023),
+          onde me graduei com distinção de mérito colaborativo,
+          e mestrando em Economia na FEA-USP.
+
+          No Insper, atuei como professor monitor da disciplina
+          de Sistemas de Informação, durante o ano de 2020,
+          enquanto ainda era aluno da graduação. Além de ter
+          sido teaching assistant de Microeconomia I
+          (de julho de 2023 à dezembro de 2025) e de
+          Econometria (durante todo o ano de 2025) no Insper.
+          Também fui teaching assistant de Econometria I
+          na Faculdade Belavista em 2025.
         </p>
 
         <p>
-          Desde 2021 ofereço aulas particulares — individuais e em grupo — para alunos de graduação em Administração e Economia, com foco especial nas principais escolas de negócios de São Paulo.
-          Já ajudei mais de 1000 alunos a conquistarem a almejada aprovação e utilizo uma abordagem clara e personalizada, fundamentada na metodologia <i>learning by doing</i>.
+          Desde 2021 ofereço aulas particulares — individuais
+          e em grupo — para alunos de graduação em Administração
+          e Economia, com foco especial nas principais escolas
+          de negócios de São Paulo.
+
+          Já ajudei mais de 1000 alunos a conquistarem a almejada
+          aprovação e utilizo uma abordagem clara e personalizada,
+          fundamentada na metodologia <i>learning by doing</i>.
         </p>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- AULAS PARTICULARES -->
+
   <section id="aulas">
+
     <h2>Aulas Particulares</h2>
-    <p>Para alunos do <b>Insper</b> ofereço aulas particulares para as seguintes disciplinas:</p>
+
+    <p>
+      Para alunos do <b>Insper</b> ofereço aulas particulares
+      para as seguintes disciplinas:
+    </p>
+
     <ul>
       <li>Sistemas de Informação</li>
       <li>Estatística I e II</li>
@@ -152,64 +317,421 @@
       <li>Econometria</li>
       <li>Microeconomia I, II e III</li>
     </ul>
-    <p>Para alunos de <b>outras faculdades</b> ofereço aulas particulares nas seguintes áreas:</p>
+
+    <p>
+      Para alunos de <b>outras faculdades</b> ofereço aulas
+      particulares nas seguintes áreas:
+    </p>
+
     <ul>
       <li>Excel</li>
       <li>Programação em VBA, Python, R e Stata</li>
-      <li>Estatística: Análise descritiva, Combinatória, Distribuições de probabilidades e Inferência estatística</li>
+      <li>
+        Estatística: Análise descritiva, Combinatória,
+        Distribuições de probabilidades e Inferência estatística
+      </li>
       <li>Econometria</li>
       <li>Cálculo</li>
       <li>Microeconomia</li>
     </ul>
-    <p>Modalidade online com agendamentos flexíveis. Entre em contato para mais detalhes.</p>
+
+    <p>
+      Modalidade online com agendamentos flexíveis.
+      Entre em contato para mais detalhes.
+    </p>
+
     <p>Vamos juntos!</p>
+
     <div class="button-container">
-      <a href="http://wa.me/+5511987333219" class="button" target="_blank">Agendar Aula</a>
-    </div>
-  </section>
 
-<section id="auloes">
-      
-  <h2>Agenda de Imersões de revisão para o INSPER - Provas Finais de 2026.2</h2>
-    <p><strong>💰 Investimento por imersão: R$120</strong></p>
-       <p><strong>Estatística 1 (2º semestre de ADM/ECO):</strong></p>
-    <ul>
-      <li><b>PARTE 1: Revisão distribuições contínuas (Exponencial, Nornmal e Uniforme)</b> - Formato online via Zoom<br>📅 <b>28 de novembro (sábado)</b> às <b>14:30</b></li><br>
-      <li><b>PARTE 2: Revisão de distribuições discretas bidimensionais e soma de variáveis aleatórias (dependentes e independentes)</b> - Formato online via Zoom<br>📅 <b>29 de novembro (domingo)</b> às <b>10:00</b></li><br>
-      <li><b>PARTE 3: Revisão de análise descritiva (R) </b> - Formato online via Zoom<br>📅 <b>30 de novembro (segunda-feira)</b> às <b>14:30</b></li><br>
-    </ul>
-       <p><strong>Sistemas de Informação (SI) (1º semestre de ADM/ECO):</strong></p>
-    <ul>
-      <li><b>Revisão de Python para a PF (PARTE 1)</b> - Formato online via Zoom<br>📅 <b>29 de novembro (domingo)</b> às <b>14:30</b></li><br>
-      <li><b>Revisão de VBA para a PF</b> - Formato online via Zoom<br>📅 <b>30 de novembro (segunda-feira)</b> às <b>10:00</b></li><br>
-      <li><b>Revisão de Python para a PF (PARTE 2): DataFrame do Pandas, API do Yahoo Finance e Def (function)</b> - Formato online via Zoom<br>📅 <b>31 de novembro (terça-feira)</b> às <b>14:30</b></li><br>
-    </ul>
-       
-
-  <div class="button-container">
-
-      <a
-        href="http://wa.me/+5511987333219"
-        class="button"
-        target="_blank">
-        Reserve agora
+      <a href="http://wa.me/+5511987333219"
+         class="button"
+         target="_blank">
+        Agendar Aula
       </a>
 
     </div>
-            
 
-</section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>📧 Email: tales.augusto22@hotmail.com<br>
-       📱 WhatsApp: (11) 98733-3219<br>
-       🔗 <a href="https://www.linkedin.com/in/tales-augusto-de-almeida?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-    </p>
   </section>
 
+
+  <!-- AGENDA DE IMERSÕES -->
+
+  <section id="auloes">
+
+    <h2>
+      Agenda de Imersões de revisão para o INSPER -
+      Provas Finais de 2026.2
+    </h2>
+
+    <p>
+      <strong>💰 Investimento por imersão: R$120</strong>
+    </p>
+
+
+    <!-- ESTATÍSTICA 1 -->
+
+    <h3 class="agenda-disciplina">
+      Estatística 1 (2º semestre de ADM/ECO):
+    </h3>
+
+    <ul class="agenda-lista">
+
+      <!-- ESTATÍSTICA - PARTE 1 -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-11-28T14:30:00-03:00"
+              aria-label="28 de novembro de 2026">
+
+          <span class="calendario-mes">NOV</span>
+          <span class="calendario-dia">28</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            PARTE 1: Revisão de distribuições contínuas
+            (Exponencial, Normal e Uniforme)
+          </strong>
+
+          <span class="imersao-horario">
+            Sábado · 14h30
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+
+      <!-- ESTATÍSTICA - PARTE 2 -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-11-29T10:00:00-03:00"
+              aria-label="29 de novembro de 2026">
+
+          <span class="calendario-mes">NOV</span>
+          <span class="calendario-dia">29</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            PARTE 2: Revisão de distribuições discretas
+            bidimensionais e soma de variáveis aleatórias
+            (dependentes e independentes)
+          </strong>
+
+          <span class="imersao-horario">
+            Domingo · 10h00
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+
+      <!-- ESTATÍSTICA - PARTE 3 -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-11-30T14:30:00-03:00"
+              aria-label="30 de novembro de 2026">
+
+          <span class="calendario-mes">NOV</span>
+          <span class="calendario-dia">30</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            PARTE 3: Revisão de análise descritiva (R)
+          </strong>
+
+          <span class="imersao-horario">
+            Segunda-feira · 14h30
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+    </ul>
+
+
+    <!-- SISTEMAS DE INFORMAÇÃO -->
+
+    <h3 class="agenda-disciplina">
+      Sistemas de Informação (SI) (1º semestre de ADM/ECO):
+    </h3>
+
+    <ul class="agenda-lista">
+
+
+      <!-- PYTHON - PARTE 1 -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-11-29T14:30:00-03:00"
+              aria-label="29 de novembro de 2026">
+
+          <span class="calendario-mes">NOV</span>
+          <span class="calendario-dia">29</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            Revisão de Python para a PF (PARTE 1)
+          </strong>
+
+          <span class="imersao-horario">
+            Domingo · 14h30
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+
+      <!-- REVISÃO DE VBA -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-11-30T10:00:00-03:00"
+              aria-label="30 de novembro de 2026">
+
+          <span class="calendario-mes">NOV</span>
+          <span class="calendario-dia">30</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            Revisão de VBA para a PF
+          </strong>
+
+          <span class="imersao-horario">
+            Segunda-feira · 10h00
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+
+      <!-- PYTHON - PARTE 2 -->
+
+      <li class="imersao">
+
+        <time class="calendario"
+              datetime="2026-12-01T14:30:00-03:00"
+              aria-label="1 de dezembro de 2026">
+
+          <span class="calendario-mes">DEZ</span>
+          <span class="calendario-dia">01</span>
+
+        </time>
+
+        <div class="imersao-info">
+
+          <strong class="imersao-titulo">
+            Revisão de Python para a PF (PARTE 2):
+            DataFrame do Pandas, API do Yahoo Finance
+            e Def (function)
+          </strong>
+
+          <span class="imersao-horario">
+            Terça-feira · 14h30
+          </span>
+
+          <span class="imersao-modalidade">
+
+            <svg class="icone-video"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.7"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+
+              <rect x="2" y="5" width="14" height="14" rx="2"/>
+              <path d="m16 10 6-4v12l-6-4"/>
+
+            </svg>
+
+            Online via Zoom
+
+          </span>
+
+        </div>
+
+      </li>
+
+    </ul>
+
+
+    <!-- BOTÃO DE RESERVA -->
+
+    <div class="button-container">
+
+      <a href="http://wa.me/+5511987333219"
+         class="button"
+         target="_blank">
+
+        Reserve agora
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTATO -->
+
+  <section id="contato">
+
+    <h2>Contato</h2>
+
+    <p>
+
+      📧 Email: tales.augusto22@hotmail.com<br>
+
+      📱 WhatsApp: (11) 98733-3219<br>
+
+      🔗 <a href="https://www.linkedin.com/in/tales-augusto-de-almeida?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+           target="_blank">
+        LinkedIn
+      </a>
+
+    </p>
+
+  </section>
+
+
+  <!-- RODAPÉ -->
+
   <footer>
-    <p>&copy; 2025 Tales Augusto de Almeida. Todos os direitos reservados.</p>
+
+    <p>
+      &copy; 2025 Tales Augusto de Almeida.
+      Todos os direitos reservados.
+    </p>
+
   </footer>
+
 </body>
 </html>
